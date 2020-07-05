@@ -35,18 +35,18 @@ var testTool = {
   },
   getMeetingConfig: function () {
     return {
-      mn: parseInt(document.getElementById("meeting_number").value),
+      mn: '',//parseInt(document.getElementById("meeting_number").value),
       name: testTool.b64EncodeUnicode(
         document.getElementById("display_name").value
       ),
       pwd: document.getElementById("meeting_pwd").value,
-      role: parseInt(document.getElementById("meeting_role").value, 10),
+      role: 0,// parseInt(document.getElementById("meeting_role").value, 10),
       email: testTool.b64EncodeUnicode(
         document.getElementById("meeting_email").value
       ),
       lang: document.getElementById("meeting_lang").value,
       signature: "",
-      china: document.getElementById("meeting_china").value,
+      china: 0//document.getElementById("meeting_china").value,
     };
   },
   createZoomNode: function (id, url) {
